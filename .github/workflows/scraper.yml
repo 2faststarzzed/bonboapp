@@ -1,0 +1,28 @@
+name: Robot Bonbo Automatique
+
+on:
+  schedule:
+    # Tous les jours à 6h00 (Heure de Paris = 5h00 UTC)
+    - cron: '0 5 * * *'
+  workflow_dispatch: # Ajoute un bouton magique pour le lancer manuellement quand tu veux !
+
+jobs:
+  lancement-robot:
+    runs-on: ubuntu-latest # On utilise un serveur Linux gratuit de GitHub
+
+    steps:
+    - name: 1. Récupération du code
+      uses: actions/checkout@v4
+
+    - name: 2. Installation de Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: 3. Installation des outils (Selenium, Supabase...)
+      run: |
+        pip install -r requirements.txt
+
+    - name: 4. Lancement du scan des promos 🚀
+      run: |
+        python robot_bonbo.py
