@@ -12,7 +12,7 @@ import re
 
 # --- CONNEXION SUPABASE ---
 URL = "https://qaalcibonrfizpwbwcyf.supabase.co"
-KEY = "sb_publishable_eH3iTHselgi4u01FcK112Q_dPSaSn3b"
+KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhYWxjaWJvbnJmaXpwd2J3Y3lmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIxMDMzMTYsImV4cCI6MjA4NzY3OTMxNn0.1BjwjdDn-ONwxD8LnUHFj4xLI-XvWzenBYXP43kLGTU"
 supabase: Client = create_client(URL, KEY)
 
 # --- 1. LE CERVEAU ---
